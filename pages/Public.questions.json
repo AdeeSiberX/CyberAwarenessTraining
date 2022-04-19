@@ -1839,8 +1839,8 @@
                       "borderColor": "#03b365",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
-                      "topRow": 5,
-                      "bottomRow": 10,
+                      "topRow": 4,
+                      "bottomRow": 11,
                       "parentRowSpace": 10,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
@@ -1855,6 +1855,7 @@
                         }
                       ],
                       "shouldTruncate": false,
+                      "borderWidth": "1",
                       "truncateButtonColor": "#FFC13D",
                       "text": "{{Table1.selectedRow.correctoption.toString()}}",
                       "key": "5g65b4lrov",
