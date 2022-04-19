@@ -5,10 +5,10 @@
   "color": "#EAEDFB",
   "icon": "arrow-up",
   "unpublishedAppLayout": {
-    "type": "DESKTOP"
+    "type": "FLUID"
   },
   "publishedAppLayout": {
-    "type": "DESKTOP"
+    "type": "FLUID"
   },
   "evaluationVersion": 2,
   "applicationVersion": 2,
