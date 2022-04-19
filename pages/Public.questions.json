@@ -8,7 +8,7 @@
         "dsl": {
           "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 2816,
+          "rightColumn": 1280,
           "snapColumns": 64,
           "detachFromLayout": true,
           "widgetId": "0",
@@ -20,7 +20,7 @@
           "type": "CANVAS_WIDGET",
           "canExtend": true,
           "version": 56,
-          "minHeight": 1220,
+          "minHeight": 860,
           "parentColumnSpace": 1,
           "dynamicTriggerPathList": [],
           "dynamicBindingPathList": [],
@@ -74,7 +74,8 @@
                         "optionc",
                         "optiond",
                         "explanation",
-                        "explanation_incorrect"
+                        "explanation_incorrect",
+                        "correctoption"
                       ],
                       "dynamicPropertyPathList": [
                         {
@@ -125,6 +126,9 @@
                         },
                         {
                           "key": "primaryColumns.explanation_incorrect.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.correctoption.computedValue"
                         }
                       ],
                       "leftColumn": 0,
@@ -144,7 +148,8 @@
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "number",
-                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.number))}}"
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.number))}}",
+                          "cellBackground": ""
                         },
                         "question": {
                           "index": 1,
@@ -161,7 +166,8 @@
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "question",
-                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.question))}}"
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.question))}}",
+                          "cellBackground": ""
                         },
                         "optiona": {
                           "index": 2,
@@ -178,7 +184,8 @@
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "optiona",
-                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.optiona))}}"
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.optiona))}}",
+                          "cellBackground": ""
                         },
                         "optionb": {
                           "index": 3,
@@ -195,7 +202,8 @@
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "optionb",
-                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.optionb))}}"
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.optionb))}}",
+                          "cellBackground": ""
                         },
                         "optionc": {
                           "index": 4,
@@ -212,7 +220,8 @@
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "optionc",
-                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.optionc))}}"
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.optionc))}}",
+                          "cellBackground": ""
                         },
                         "optiond": {
                           "index": 5,
@@ -229,7 +238,8 @@
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "optiond",
-                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.optiond))}}"
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.optiond))}}",
+                          "cellBackground": ""
                         },
                         "explanation": {
                           "index": 6,
@@ -246,7 +256,8 @@
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "explanation",
-                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.explanation))}}"
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.explanation))}}",
+                          "cellBackground": ""
                         },
                         "explanation_incorrect": {
                           "index": 7,
@@ -263,10 +274,30 @@
                           "isCellVisible": true,
                           "isDerived": false,
                           "label": "explanation_incorrect",
-                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.explanation_incorrect))}}"
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.explanation_incorrect))}}",
+                          "cellBackground": ""
+                        },
+                        "correctoption": {
+                          "index": 8,
+                          "width": 150,
+                          "id": "correctoption",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "PARAGRAPH",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "correctoption",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.correctoption))}}",
+                          "cellBackground": ""
                         }
                       },
                       "delimiter": ",",
+                      "onRowSelected": "",
                       "derivedColumns": {},
                       "rightColumn": 64,
                       "textSize": "PARAGRAPH",
@@ -285,6 +316,7 @@
                       "horizontalAlignment": "LEFT",
                       "isVisibleSearch": true,
                       "isVisiblePagination": true,
+                      "cellBackground": "",
                       "verticalAlignment": "CENTER",
                       "columnSizeMap": {
                         "task": 245,
@@ -338,7 +370,7 @@
                       "leftColumn": 0,
                       "dynamicBindingPathList": [],
                       "fontSize": "HEADING1",
-                      "text": "public_questions Data"
+                      "text": "Questions Data"
                     },
                     {
                       "boxShadow": "NONE",
@@ -1240,16 +1272,12 @@
               "widgetName": "Form1",
               "backgroundColor": "white",
               "rightColumn": 64,
-              "dynamicPropertyPathList": [
-                {
-                  "key": "isVisible"
-                }
-              ],
+              "dynamicPropertyPathList": [],
               "widgetId": "m7dvlazbn7",
-              "topRow": 11,
-              "bottomRow": 78,
+              "topRow": 1,
+              "bottomRow": 68,
               "parentRowSpace": 10,
-              "isVisible": "{{!!Table1.selectedRow.number}}",
+              "isVisible": true,
               "type": "FORM_WIDGET",
               "parentId": "0",
               "isLoading": false,
@@ -1258,11 +1286,7 @@
               "parentColumnSpace": 18.8828125,
               "dynamicTriggerPathList": [],
               "leftColumn": 40,
-              "dynamicBindingPathList": [
-                {
-                  "key": "isVisible"
-                }
-              ],
+              "dynamicBindingPathList": [],
               "children": [
                 {
                   "widgetName": "Canvas2",
@@ -1289,8 +1313,8 @@
                       "widgetName": "update_col_8",
                       "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595.svg",
-                      "topRow": 45,
-                      "bottomRow": 49,
+                      "topRow": 50,
+                      "bottomRow": 54,
                       "parentRowSpace": 10,
                       "autoFocus": false,
                       "type": "INPUT_WIDGET_V2",
@@ -1325,8 +1349,8 @@
                       "widgetName": "update_col_7",
                       "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595.svg",
-                      "topRow": 39,
-                      "bottomRow": 43,
+                      "topRow": 44,
+                      "bottomRow": 48,
                       "parentRowSpace": 10,
                       "autoFocus": false,
                       "type": "INPUT_WIDGET_V2",
@@ -1361,8 +1385,8 @@
                       "widgetName": "Text24",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
-                      "topRow": 45,
-                      "bottomRow": 49,
+                      "topRow": 50,
+                      "bottomRow": 54,
                       "parentRowSpace": 10,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
@@ -1392,8 +1416,8 @@
                       "widgetName": "Text23",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
-                      "topRow": 39,
-                      "bottomRow": 43,
+                      "topRow": 44,
+                      "bottomRow": 48,
                       "parentRowSpace": 10,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
@@ -1508,8 +1532,8 @@
                       "rightColumn": 18,
                       "textAlign": "RIGHT",
                       "widgetId": "afzzc7q8af",
-                      "topRow": 6,
-                      "bottomRow": 10,
+                      "topRow": 11,
+                      "bottomRow": 15,
                       "parentRowSpace": 10,
                       "isVisible": "true",
                       "fontStyle": "BOLD",
@@ -1531,8 +1555,8 @@
                       "rightColumn": 18,
                       "textAlign": "RIGHT",
                       "widgetId": "xqcsd2e5dj",
-                      "topRow": 13,
-                      "bottomRow": 17,
+                      "topRow": 18,
+                      "bottomRow": 22,
                       "parentRowSpace": 10,
                       "isVisible": "true",
                       "fontStyle": "BOLD",
@@ -1554,8 +1578,8 @@
                       "rightColumn": 18,
                       "textAlign": "RIGHT",
                       "widgetId": "l109ilp3vq",
-                      "topRow": 20,
-                      "bottomRow": 24,
+                      "topRow": 25,
+                      "bottomRow": 29,
                       "parentRowSpace": 10,
                       "isVisible": "true",
                       "fontStyle": "BOLD",
@@ -1577,8 +1601,8 @@
                       "rightColumn": 18,
                       "textAlign": "RIGHT",
                       "widgetId": "gqpwf0yng6",
-                      "topRow": 27,
-                      "bottomRow": 31,
+                      "topRow": 32,
+                      "bottomRow": 36,
                       "parentRowSpace": 10,
                       "isVisible": "true",
                       "fontStyle": "BOLD",
@@ -1599,8 +1623,8 @@
                       "widgetName": "update_col_2",
                       "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595.svg",
-                      "topRow": 6,
-                      "bottomRow": 10,
+                      "topRow": 11,
+                      "bottomRow": 15,
                       "parentRowSpace": 10,
                       "autoFocus": false,
                       "type": "INPUT_WIDGET_V2",
@@ -1636,8 +1660,8 @@
                       "widgetName": "update_col_3",
                       "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595.svg",
-                      "topRow": 13,
-                      "bottomRow": 17,
+                      "topRow": 18,
+                      "bottomRow": 22,
                       "parentRowSpace": 10,
                       "autoFocus": false,
                       "type": "INPUT_WIDGET_V2",
@@ -1673,8 +1697,8 @@
                       "widgetName": "update_col_4",
                       "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595.svg",
-                      "topRow": 20,
-                      "bottomRow": 24,
+                      "topRow": 25,
+                      "bottomRow": 29,
                       "parentRowSpace": 10,
                       "autoFocus": false,
                       "type": "INPUT_WIDGET_V2",
@@ -1710,8 +1734,8 @@
                       "widgetName": "update_col_5",
                       "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595.svg",
-                      "topRow": 27,
-                      "bottomRow": 31,
+                      "topRow": 32,
+                      "bottomRow": 36,
                       "parentRowSpace": 10,
                       "autoFocus": false,
                       "type": "INPUT_WIDGET_V2",
@@ -1747,8 +1771,8 @@
                       "widgetName": "Text21",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
-                      "topRow": 33,
-                      "bottomRow": 37,
+                      "topRow": 38,
+                      "bottomRow": 42,
                       "parentRowSpace": 10,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
@@ -1778,8 +1802,8 @@
                       "widgetName": "update_col_6",
                       "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595.svg",
-                      "topRow": 33,
-                      "bottomRow": 37,
+                      "topRow": 38,
+                      "bottomRow": 42,
                       "parentRowSpace": 10,
                       "autoFocus": false,
                       "type": "INPUT_WIDGET_V2",
@@ -1809,6 +1833,41 @@
                       "isLoading": false,
                       "iconAlign": "left",
                       "defaultText": "{{Table1.selectedRow.optiond.toString()}}"
+                    },
+                    {
+                      "widgetName": "Text39",
+                      "displayName": "Text",
+                      "iconSVG": "/static/media/icon.97c59b52.svg",
+                      "topRow": 5,
+                      "bottomRow": 10,
+                      "parentRowSpace": 10,
+                      "type": "TEXT_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "overflow": "NONE",
+                      "parentColumnSpace": 7.1171875,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 10,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "text"
+                        }
+                      ],
+                      "shouldTruncate": false,
+                      "truncateButtonColor": "#FFC13D",
+                      "text": "{{Table1.selectedRow.correctoption.toString()}}",
+                      "key": "5g65b4lrov",
+                      "rightColumn": 54,
+                      "textAlign": "CENTER",
+                      "widgetId": "wsqf8q8mie",
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "cicukwhp5j",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "fontSize": "HEADING2"
                     }
                   ]
                 }
@@ -1869,6 +1928,7 @@
           "Text36",
           "Text37",
           "Text38",
+          "Text39",
           "Text9",
           "col_select",
           "insert_button",
