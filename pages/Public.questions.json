@@ -1836,6 +1836,7 @@
                     },
                     {
                       "widgetName": "Text39",
+                      "borderColor": "#03b365",
                       "displayName": "Text",
                       "iconSVG": "/static/media/icon.97c59b52.svg",
                       "topRow": 5,
@@ -1862,7 +1863,7 @@
                       "widgetId": "wsqf8q8mie",
                       "isVisible": true,
                       "fontStyle": "BOLD",
-                      "textColor": "#231F20",
+                      "textColor": "#03b365",
                       "version": 1,
                       "parentId": "cicukwhp5j",
                       "renderMode": "CANVAS",
